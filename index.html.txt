@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>theestudio25</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/theestudios.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-pink-50 to-gray-50 text-gray-800">
+    <!-- Header Section (You can add it here) -->
+    <header class="text-center py-10">
+        <!-- Brand Logo Above "Theestudio" Text -->
+  <div class="text-center my-8">
+    <img src="images/theestudios.jpeg" alt="Thee Studios Logo" class="mx-auto w-32 h-32 object-contain">
+  </div>
+  <h1 class="text-5xl font-bold text-blue-600">Theestudio</h1>
+
+        <p class="text-lg text-pink-500 mt-2">Weddings | Engagements | Maternity | Baby Shoots| Pre-Wedding </p>
+    </header>
+<section id="video-bg" class="relative w-full h-[500px] overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="videos/wv.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="absolute z-10 flex items-center justify-center w-full h-full bg-black/50">
+      <h2 class="text-white text-4xl font-bold">Welcome to Thee Studios</h2>
+    </div>
+  </section>
+  <section id="video-bg" class="relative w-full h-[500px] overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="videos/wv1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="absolute z-10 flex items-center justify-center w-full h-full bg-black/50">
+      <h2 class="text-white text-4xl font-bold">Memories!</h2>
+    </div>
+  </section>
+  
+  
+      <!-- Add more videos as needed -->
+    </div>
+  </section>
+  
+    <!-- Photography Gallery Section -->
+    <section class="container mx-auto px-4 py-8">
+        <!-- Tag Navigation -->
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold mb-4">Services Available</h2>
+            <div>
+                <button id="weddingTag" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition mx-2">Wedding</button>
+                <button id="engagementTag" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition mx-2">Engagement</button>
+                <button id="maternityTag" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition mx-2">Maternity</button>
+                <button id="babyTag" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition mx-2">Baby</button>
+            </div>
+        </div>
+
+        <!-- Wedding Gallery -->
+        <div id="weddingGallery" class="gallery hidden">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="images/wp1.jpeg" alt="Wedding Photo 1" class="rounded-xl shadow-md hover:scale-105 transition">
+                <img src="images/wp2.jpeg" alt="Wedding Photo 2" class="rounded-xl shadow-md hover:scale-105 transition">
+                <img src="images/wp3.jpeg" alt="Wedding Photo 3" class="rounded-xl shadow-md hover:scale-105 transition">
+                <img src="images/wp4.jpeg" alt="Wedding Photo 4" class="rounded-xl shadow-md hover:scale-105 transition">
+            </div>
+        </div>
+
+        <!-- Engagement Gallery -->
+        <div id="engagementGallery" class="gallery hidden">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="images/ep2.jpeg" alt="Engagement Photo 1" class="rounded-xl shadow-md hover:scale-105 transition">
+                <img src="images/ep3.jpeg" alt="Engagement Photo 2" class="rounded-xl shadow-md hover:scale-105 transition">
+            </div>
+        </div>
+
+        <!-- Maternity Gallery -->
+        <div id="maternityGallery" class="gallery hidden">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="images/mp1.jpeg" alt="Maternity Photo 1" class="rounded-xl shadow-md hover:scale-105 transition">
+                <img src="images/mp2.jpeg" alt="Maternity Photo 2" class="rounded-xl shadow-md hover:scale-105 transition">
+            </div>
+        </div>
+
+        <!-- Baby Photoshoot Gallery -->
+        <div id="babyGallery" class="gallery hidden">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <img src="images/bp1.jpeg" alt="Baby Photo 1" class="rounded-xl shadow-md hover:scale-105 transition">
+                <img src="images/bp2.jpeg" alt="Baby Photo 2" class="rounded-xl shadow-md hover:scale-105 transition">
+                <img src="images/bp3.jpeg" alt="Baby Photo 3" class="rounded-xl shadow-md hover:scale-105 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Tag Switching -->
+    <script>
+        const weddingTag = document.getElementById('weddingTag');
+        const engagementTag = document.getElementById('engagementTag');
+        const maternityTag = document.getElementById('maternityTag');
+        const babyTag = document.getElementById('babyTag');
+
+        const weddingGallery = document.getElementById('weddingGallery');
+        const engagementGallery = document.getElementById('engagementGallery');
+        const maternityGallery = document.getElementById('maternityGallery');
+        const babyGallery = document.getElementById('babyGallery');
+
+        // Show Wedding Gallery
+        weddingTag.addEventListener('click', () => {
+            weddingGallery.classList.remove('hidden');
+            engagementGallery.classList.add('hidden');
+            maternityGallery.classList.add('hidden');
+            babyGallery.classList.add('hidden');
+        });
+
+        // Show Engagement Gallery
+        engagementTag.addEventListener('click', () => {
+            weddingGallery.classList.add('hidden');
+            engagementGallery.classList.remove('hidden');
+            maternityGallery.classList.add('hidden');
+            babyGallery.classList.add('hidden');
+        });
+
+        // Show Maternity Gallery
+        maternityTag.addEventListener('click', () => {
+            weddingGallery.classList.add('hidden');
+            engagementGallery.classList.add('hidden');
+            maternityGallery.classList.remove('hidden');
+            babyGallery.classList.add('hidden');
+        });
+
+        // Show Baby Photoshoot Gallery
+        babyTag.addEventListener('click', () => {
+            weddingGallery.classList.add('hidden');
+            engagementGallery.classList.add('hidden');
+            maternityGallery.classList.add('hidden');
+            babyGallery.classList.remove('hidden');
+        });
+    </script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-100 py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-800">Get In Touch</h2>
+            <p class="text-gray-600 mb-8">I'd love to hear from you! Whether it's a wedding, maternity, or baby shoot—let’s create something beautiful together.</p>
+            <p class="text-gray-600 mb-8">Capture the moments with us!</p>
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <a href="https://www.instagram.com/theestudio25/" target="_blank" class="inline-block px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition">
+                    📸 Visit Our Instagram
+                  </a>
+                  
+                <!-- Contact Info -->
+                <!-- Contact Info with Emojis -->
+<div class="space-y-4">
+    <div>
+        <h4 class="text-lg font-semibold text-gray-700">📧 Email</h4>
+        <p class="text-gray-600">theestudio25@gmail.com</p>
+    </div>
+    <div>
+        <h4 class="text-lg font-semibold text-gray-700">📱 Phone</h4>
+        <p class="text-gray-600">+91 8122356309</p>
+    </div>
+    <div>
+        <h4 class="text-lg font-semibold text-gray-700">📍 Location</h4>
+        <p class="text-gray-600">Chidamabaram, India</p>
+    </div>
+</div>
+
+
+                <!-- Contact Form -->
+                <form class="space-y-4 bg-white p-6 rounded-lg shadow-lg">
+                    <div>
+                        <label class="block text-gray-700 font-medium">Name</label>
+                        <input type="text" class="w-full border border-gray-300 p-2 rounded-md" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium">Mail_Id</label>
+                        <input type="email" class="w-full border border-gray-300 p-2 rounded-md" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium">Function Date</label>
+                        <input type="email" class="w-full border border-gray-300 p-2 rounded-md" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium">Message</label>
+                        <textarea class="w-full border border-gray-300 p-2 rounded-md" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="video-bg" class="relative w-full h-[500px] overflow-hidden">
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+          <source src="videos/wv2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="absolute z-10 flex items-center justify-center w-full h-full bg-black/50">
+          <h2 class="text-white text-4xl font-bold">Capture the moments!</h2>
+        </div>
+      </section>
+      
+
+</body>
+</html>
